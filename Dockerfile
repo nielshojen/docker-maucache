@@ -8,4 +8,6 @@ RUN apt-get update -q && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+VOLUME /usr/share/nginx/www
+
 ENTRYPOINT ["/usr/local/MAUCacheAdmin", "--CachePath:/usr/share/nginx/www", "--CheckInterval:15"]
