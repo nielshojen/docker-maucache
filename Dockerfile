@@ -10,4 +10,6 @@ RUN apt-get update -q && \
 
 VOLUME /usr/share/nginx/www
 
+EXPOSE 80
+
 ENTRYPOINT ["/usr/local/MAUCacheAdmin", "--CachePath:/usr/share/nginx/www", "--CheckInterval:15"]
