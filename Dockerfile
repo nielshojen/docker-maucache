@@ -14,4 +14,4 @@ VOLUME ["/var/www/html", "/MAUCache"]
 
 EXPOSE 80
 
-ENTRYPOINT ["/run.sh"]
+ENTRYPOINT ["/bin/bash /run.sh"]
