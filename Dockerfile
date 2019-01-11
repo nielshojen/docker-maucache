@@ -8,8 +8,10 @@ RUN apt-get update -q && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+COPY run.sh /
+
 VOLUME ["/var/www/html", "/MAUCache"]
 
 EXPOSE 80
 
-ENTRYPOINT ["/usr/local/MAUCacheAdmin", "--CachePath:/var/www/html", "--CheckInterval:15"]
+ENTRYPOINT ["/run.sh"]
